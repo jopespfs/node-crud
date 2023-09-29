@@ -7,3 +7,9 @@ POST http://localhost:5000/produto
 ###
 
 GET http://localhost:5000/produto/5cec0347-5a14-434b-a437-ef1912adf32b
+
+###
+PUT http://localhost:5000/produto/c76a169b-95ca-42de-82da-f107f0c6a564
+Content-Type: 'application/json
+###
+DELETE http://localhost:5000/produto/c76a169b-95ca-42de-82da-f107f0c6a564

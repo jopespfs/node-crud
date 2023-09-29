@@ -17,6 +17,20 @@ export class DataBaseTemp {
   listarPorId = (idParam) => {
     return this.produtos.find(produto => produto.id === idParam)
   };
-  autualizar = () => {};
-  excluir = () => {};
+  autualizar = (idParam, produtoAtualizado) => {
+    const produtoBD = this.listarPorId(idParam)
+    console.log('produtoBD', produtoBD);
+
+    if(produtoBD){
+      produtoBD.nome = produtoAtualizado.nome
+      produtoBD.modelo = produtoAtualizado.modelo
+      produtoBD.preco = produtoAtualizado.preco
+
+
+    }
+  };
+  excluir = (idParam) => {
+    let indexProduto = this.produto.findIndex(produto => produto.id === idParam)
+    return this.produtos.splice(indexProduto, 1)
+  };
 }
